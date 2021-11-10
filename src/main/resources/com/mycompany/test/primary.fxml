@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="443.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.test.PrimaryController">
+   <children>
+      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home">
+            <items>
+              <MenuItem fx:id="primaryButton" mnemonicParsing="false" onAction="#switchToSecondary" text="Week display" />
+                  <MenuItem mnemonicParsing="false" text="Day Display" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Profile">
+              <items>
+                <MenuItem mnemonicParsing="false" text="My Profile" />
+                  <MenuItem mnemonicParsing="false" text="Loggout" />
+                  <MenuItem fx:id="editSchedule" mnemonicParsing="false" onAction="#switchToEdit" text="Edit Schedule" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Community">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Browse Highlights" />
+                  <MenuItem mnemonicParsing="false" text="Years Top Highlights" />
+                  <MenuItem mnemonicParsing="false" text="Team Contacts" />
+                  <MenuItem mnemonicParsing="false" text="Email Coach" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="helpButton" mnemonicParsing="false" onAction="#switchToAbout" text="About" />
+                  <MenuItem mnemonicParsing="false" text="Email Support" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <right>
+            <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" text="Team Roster" />
+                  <ListView />
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <TableView BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </center></BorderPane>
+   </children>
+</AnchorPane>
